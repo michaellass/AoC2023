@@ -1,3 +1,5 @@
+#!/usr/bin/env -S sbcl --script
+
 (defun readin_file (filename)
     (with-open-file (stream filename)
         (loop for line = (read-line stream nil)
@@ -18,5 +20,3 @@
 
 (format t "~D~%"
     (apply '+ (solveAll)))
-
-(quit)
